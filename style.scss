@@ -41,7 +41,7 @@
         img {
           display: none;
         }
-        p {
+        a {
           margin: 0;
           font-family: "Roboto";
           font-style: normal;
@@ -49,6 +49,8 @@
           font-size: 17px;
           line-height: 16px;
           text-align: center;
+          text-decoration: none;
+          color: white;
         }
       }
       .social__link {
@@ -394,7 +396,7 @@
         img {
           display: block;
         }
-        p {
+        a {
           margin: 0;
           font-family: "Roboto";
           font-style: normal;
@@ -402,6 +404,8 @@
           font-size: 17px;
           line-height: 16px;
           text-align: center;
+          text-decoration: none;
+          color: white;
         }
       }
       .social__link {
@@ -694,15 +698,15 @@
 }
 
 // Дестопна версія
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .header {
-    min-width: 1440px;
+    min-width: 1200px;
     height: 77px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     .container {
-      margin: 0 128px;
+      margin: 0 100px;
     }
     &__inner {
       display: flex;
@@ -718,11 +722,36 @@
         img {
           display: block;
         }
+        a {
+          transition: all 0.5s;
+        }
+        a:hover {
+          color: pink;
+          transition: all 0.5s;
+        }
+      }
+      .locate {
+        a {
+          transition: all 0.5s;
+        }
+        a:hover {
+          color: pink;
+          transition: all 0.5s;
+        }
+      }
+      .social__link {
+        a {
+          transition: all 0.5s;
+        }
+        a:hover {
+          color: pink;
+          transition: all 0.5s;
+        }
       }
     }
   }
   .head {
-    margin: 0;
+    margin: 0 100px;
     padding: 0 88px 48px 64px;
     background-image: url(/images/main-layer.png);
     background-size: cover;
@@ -755,7 +784,6 @@
       .menu {
         display: flex;
         gap: 24px;
-
         a {
           font-family: "Roboto";
           font-style: normal;
@@ -765,6 +793,12 @@
           text-align: center;
           color: #737373;
           text-decoration: none;
+          transition: all 0.5s;
+        }
+        a:hover {
+          color: pink;
+          transition: all 0.5s;
+          scale: 1.1;
         }
       }
     }
@@ -786,6 +820,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        z-index: -1;
       }
       h1 {
         width: 314px;
@@ -814,6 +849,13 @@
         padding: 8px 20px;
         border-radius: 8px;
         margin-top: 8px;
+        transition: all 0.5s;
+      }
+      .head__content-btn:hover {
+        cursor: pointer;
+        scale: 1.1;
+        color: pink;
+        transition: all 0.5s;
       }
     }
   }
@@ -853,10 +895,18 @@
         }
         .eva__item-text {
           height: 208px;
+          transition: all 0.5s;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
           h2 {
             font-size: 36px;
             line-height: 42px;
           }
+        }
+        .eva__item-text:hover {
+          background-color: pink;
+          transition: all 0.5s;
+          cursor: pointer;
         }
       }
     }
@@ -973,6 +1023,7 @@
             background-color: white;
             box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
             border-radius: 9px;
+            transition: all 0.5s;
             h4 {
               width: calc(100% - 50px);
               margin: 0 auto;
@@ -1007,6 +1058,11 @@
               color: #8e8e8e;
             }
           }
+          .comments__text:hover {
+            background-color: pink;
+            transition: all 0.5s;
+            cursor: pointer;
+          }
           .hexagon {
             width: 120px;
             height: 120px;
@@ -1038,7 +1094,7 @@
     }
   }
   .footer {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     margin: 160px auto;
@@ -1056,6 +1112,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 10px;
       a {
         font-family: "Roboto";
@@ -1066,25 +1123,36 @@
         text-align: left;
         color: #000000;
         text-decoration: none;
+        transition: all 0.5s;
+      }
+      a:hover {
+        color: pink;
+        transition: all 0.5s;
       }
     }
     .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       width: 100%;
-      &__img {
-        width: 33px;
-        height: 33px;
-        background-image: url(/images/inst-icon.svg);
+      a :hover {
+        background-color: pink;
+        border-radius: 10px;
       }
     }
     .about {
       width: 100%;
+      h1 {
+        text-align: center;
+      }
       p {
         font-family: "Roboto";
         font-style: normal;
         font-weight: 300;
         font-size: 14px;
         line-height: 16px;
-        text-align: left;
+        text-align: center;
         color: #000000;
       }
     }
